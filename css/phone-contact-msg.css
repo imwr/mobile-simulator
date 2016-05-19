@@ -1,0 +1,237 @@
+.phone-contact-msg {
+    z-index: 15;
+    font-family: "微软雅黑";
+    position: relative;
+    background: #eee;
+}
+
+.phone-contact-msg a.tab {
+    z-index: 15;
+    float: left;
+    background: #121212;
+    cursor: pointer;
+    width: 68px;
+    height: 16px;
+    list-style: none;
+    text-align: center;
+    padding: 12px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+.phone-contact-msg  a.tab:hover {
+    background-color: rgb(26, 25, 25);
+    color: #9493FC;
+}
+
+.phone-contact-msg a.tab.active {
+    color: #9493FC;
+    background:rgb(26, 25, 25);
+}
+
+.phone-contactor {
+    height: 36px;
+    text-align: left;
+    padding: 3px 5px;
+    color: #222;
+    position: relative;
+    border-bottom: 1px solid #999;
+}
+
+.phone-contactor .contact-name {
+    text-align: left;
+    margin-left: 15px;
+    position: relative;
+}
+
+.phone-contactor .contact-name:before {
+    content: "";
+    width: 9px;
+    background: #2891b8;
+    height: 9px;
+    position: absolute;
+    left: -13px;
+    top: 4px;
+}
+
+.phone-contactor .contact-name:after {
+    content: "→";
+    position: absolute;
+    left: -14px;
+    top: -1px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 12px;
+    transform: rotate(135deg) scale(0.8);
+}
+
+.phone-contact-msg .record-time {
+    float: right;
+    margin-right: 40px;
+    color: rgb(53, 53, 170);
+}
+
+.phone-contactor .phone-contact-dailicon {
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    border-color: rgb(41, 180, 31);
+    width: 10px;
+    margin-right: 5px;
+    height: 4px;
+    border-radius: 6px 6px 0 0;
+    border-style: solid;
+    border-width: 3px 5px 0 5px;
+    transform: rotate(-125deg);
+}
+
+.phone-contactor .contact-num {
+    text-align: left;
+    color: rgb(150, 144, 144);
+}
+
+.phone-contact-msg .phone-title {
+    font-size: 14px;
+    padding-top: 5px;
+    height: 26px;
+    background: rgb(7, 100, 162);
+    position: relative;
+}
+
+.phone-contact-msg .phone-title:after {
+    content: "";
+    position: absolute;
+    left: 160px;
+    top: 12px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: rgb(203, 216, 224) transparent transparent transparent;
+}
+
+.phone-contact-msg-test {
+    cursor: pointer;
+}
+
+.screen-phone .phone-num {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: rgb(44, 43, 43);
+}
+
+.screen-phone .phone-num input {
+    width: 94%;
+    border-radius: 8px;
+    height: 27px;
+    margin: 6px;
+    text-align: center;
+    color: #eee;
+    font-size: 14px;
+    outline: none;
+    background-color: rgb(70, 68, 68);
+    border: none;
+}
+
+.screen-phone .phone-num li {
+    list-style: none;
+    float: left;
+    width: 67px;
+    height: 16px;
+    border-top: 1px solid rgb(54, 53, 53);
+    border-left: 1px solid rgb(54, 53, 53);
+    cursor: pointer;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.screen-phone .phone-num li:hover {
+    box-shadow: inset 0 0 1px #fff;
+}
+
+.screen-msg .contact-search {
+    border-radius: 8px;
+    height: 28px;
+    margin: 6px;
+    text-align: center;
+    color: rgb(58, 46, 46);
+    font-size: 12px;
+    outline: none;
+    width:240px;
+    border: 1px solid rgb(141, 129, 129);
+    background-color: rgb(240, 235, 235);
+}
+
+.screen-msg .contact-search-icon {
+    position: absolute;
+    border-radius: 9px;
+    height: 9px;
+    width: 9px;
+    left: 21px;
+    top: 15px;
+    z-index: 16;
+    border: 2px solid rgb(83, 81, 81);
+    transform: rotate(-45deg);
+}
+
+.screen-msg .contact-search-icon:after {
+    content: "";
+    position: absolute;
+    border-radius: 8px;
+    height: 7px;
+    top: 10px;
+    left: 4px;
+    border: 1px solid #555555;
+}
+
+.screen-msg .record-time {
+    margin-right: 5px;
+}
+
+/*.phone-contact-msg .contact-touxiang {
+    width: 0px;
+    height: 0px;
+    border-width: 15px;
+    border-radius: 8px;
+    border-style: solid;
+    float: left;
+    margin: 3px 5px 0 2px;
+    border-color: #f43f5d #e4b701 #12ad2a rgba(0, 0, 255, 0.58);
+}*/
+
+.phone-contact-msg .contact-touxiang {
+    width: 30px;
+    float: left;
+    height: 30px;
+    margin: 1px 5px 0 2px;
+    border-radius: 6px;
+    border: 1px solid #aaaaaa;
+}
+
+.phone-contact-msg .contact-touxiang:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50% / 3px 3px 4px 4px;
+    background: #E0DBD8;
+    transform: scaleY(1.2);
+    border: 1px solid rgb(180, 170, 170);
+}
+
+.phone-contact-msg .contact-touxiang:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 6px;
+    top: 24px;
+    left: 12px;
+    border-radius: 50% 50% 0 0 / 3px 3px 0 0;
+    background: #DBDAD9;
+    border: 1px solid rgb(180, 170, 170);
+}
