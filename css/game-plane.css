@@ -1,0 +1,146 @@
+@CHARSET "UTF-8";
+
+.panda-game-plane {
+    position: relative;
+    width: 278px;
+    height: 420px;
+    text-align: center;
+    font-family: "Microsoft YaHei";
+}
+
+.panda-plane-container .panda-plane-canvas {
+    position: absolute;
+    left:0;
+    width:100%;
+    height:100%;
+    background: #ddd;
+    z-index: 15;
+}
+
+.panda-game-plane .panda-plane-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgb(223, 234, 245);
+    z-index: 20;
+}
+
+.panda-game-plane .panda-plane-menu {
+    padding-top: 130px;
+}
+
+.panda-plane-menu .panda-plane-msg {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.panda-plane-menu .panda-plane-score, .panda-plane-menu .panda-plane-time {
+    margin: 5px auto;
+    width: 125px;
+    height: 18px;
+    color: rgb(15, 188, 81);
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: none;
+}
+
+.panda-plane-menu .menu {
+    margin: 5px auto;
+    width: 125px;
+    height: 20px;
+    letter-spacing: 3px;
+    color: rgb(15, 188, 81);
+    font-size: 14px;
+    border: 1px solid #8ab6da;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    background-image: linear-gradient(top, rgb(255, 255, 255) 22%, rgb(227, 242, 242) 100%);
+    background-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 22%, rgb(227, 242, 242) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.22, rgb(255, 255, 255)), color-stop(1, rgb(227, 242, 242)));
+}
+
+.panda-plane-menu .panda-plane-startgame:hover {
+    color: red;
+}
+
+.panda-plane-menu .panda-plane-para:hover {
+    color: red;
+}
+
+.panda-plane-menu .panda-plane-help:hover {
+    color: red;
+}
+
+/*日历链条和环的制作*/
+.panda-game-plane .panda-plane-linker {
+    position: absolute;
+    width: 240px;
+    height: 40px;
+    top: 60px;
+    left: 20px;
+}
+
+.panda-game-plane .panda-plane-linker:before {
+    height: 1px;
+    content: "";
+    width: 278px;
+    top: 19px;
+    left: -20px;
+    background: rgb(174, 186, 187);
+    position: absolute;
+}
+
+/*上环*/
+.panda-game-plane .panda-plane-linker span {
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgb(163, 164, 167);
+    background-color: rgb(220, 222, 225);
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    margin-right: 33px;
+}
+
+.panda-game-plane .panda-plane-linker span:last-child {
+    margin-right: 0;
+}
+
+/*下环*/
+.panda-game-plane .panda-plane-linker span:before {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: -1px;
+    border: 1px solid rgb(163, 164, 167);
+    background-color: rgb(220, 222, 225);
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+}
+
+/*中间链条*/
+.panda-game-plane .panda-plane-linker span:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 30px;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+
+.panda-game-plane li {
+    height: 25px;
+    margin:0 0 8px 60px;
+    color: #121212;
+    text-align: left;
+    font-size: 14px;
+    list-style: none;
+}

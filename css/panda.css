@@ -1,0 +1,484 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: cdwangrui
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+    user-select: none;
+    overflow: hidden;
+    height: 1000px;
+    background: #c9dbe9;
+    background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+    background: linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+button {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 35%;
+    margin-right: 5px;
+    border: 1px #131e3b solid;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top, rgba(116, 124, 143, 0.8) 0%, rgba(52, 63, 92, 0.8) 50%, rgba(22, 35, 68, 0.8) 50%, rgba(35, 47, 78, 0.8) 100%);
+    background: linear-gradient(to bottom, rgba(116, 124, 143, 0.8) 0%, rgba(52, 63, 92, 0.8) 50%, rgba(22, 35, 68, 0.8) 50%, rgba(35, 47, 78, 0.8) 100%);
+    border-radius: 5px;
+    box-shadow: #454f69 0 1px 0;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, rgba(147, 157, 180, 0.8) 0%, rgba(74, 85, 116, 0.8) 50%, rgba(51, 66, 104, 0.8) 50%, rgba(53, 66, 100, 0.8) 100%);
+    background: -webkit-linear-gradient(top, rgba(147, 157, 180, 0.8) 0%, rgba(74, 85, 116, 0.8) 50%, rgba(51, 66, 104, 0.8) 50%, rgba(53, 66, 100, 0.8) 100%);
+}
+
+.panda {
+    margin: 0 auto;
+    width: 310px;
+    height: 600px;
+    position: relative;
+    animation: pandain 2000ms ease-in-out;
+}
+
+.panda-opr {
+    z-index: 999;
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+.panda-opr-opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(21, 13, 46, 0.48);
+    z-index: 998;
+}
+
+.panda-opr .panda-opr-content {
+    position: absolute;
+    background: rgba(22, 35, 68, 0.9);
+    background: linear-gradient(top, rgba(142, 157, 192, 0.8) 0%, rgba(23, 33, 58, 0.7) 30%, rgba(23, 33, 58, 0.8) 60%, rgba(23, 33, 58, 0.9) 100%);
+    border: 1px #dfe1e6 solid;
+    border-radius: 6px;
+    left: 39px;
+    z-index: 999;
+    width: 200px;
+    box-shadow: 0 0 3px #fff;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+
+.panda-opr .panda-opr-content li {
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 13px;
+    height: 20px;
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px dotted #606069;
+}
+
+.panda-opr .panda-opr-content li:hover {
+    border-radius: 6px;
+    background: #af0000;
+}
+
+.panda-opr-menu {
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    color: #000;
+    z-index: 1000;
+    font-size: 12px;
+    background: rgb(241, 241, 241);
+    animation: menuout 300ms linear;
+}
+
+.panda-opr-menu span {
+    color: #ff0000;
+    display: none;
+    cursor: pointer;
+}
+
+.panda-opr-menu .opr-menu-tasklist {
+    position: relative;
+    top: -15px;
+}
+
+.panda-menu-widget {
+    z-index: 1001;
+    position: absolute;
+    display: none;
+    height: 78px;
+    bottom: 0;
+    background: rgb(241, 241, 241);
+    padding: 5px 0;
+    overflow: hidden;
+    border-top: 1px solid #000;
+    box-shadow: inset 0 0 16px #333;
+    animation: menuout 300ms linear;
+}
+
+.panda-menu-widget .panda-widget-button li {
+    font-size: 12px;
+    list-style: none;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    color: #020202;
+    margin: 4px;
+    cursor: pointer;
+    border: 1px solid #414141;
+    padding: 1px;
+    width: 78px;
+    border-radius: 10px;
+}
+
+.panda-menu-widget .panda-widget-button li:hover {
+    background: #c6c6c6;
+    box-shadow: 0 0 0 2px inset #bababa;
+    color: red;
+}
+
+.panda-button {
+    cursor: pointer;
+    height: 45px;
+    right: -4px;
+    position: absolute;
+    width: 6px;
+}
+
+.b-power {
+    top: 100px;
+}
+
+.b-audio {
+    top: 200px;
+    height: 60px;
+}
+
+.b-camera {
+    top: 400px;
+}
+
+.panda-button i {
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 -1px 0 rgba(166, 165, 164, 0.1), 1px 0 0 rgba(166, 165, 164, 0.1), -1px 0 0 rgba(166, 165, 164, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2) inset, 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+    cursor: pointer;
+    height: 40px;
+    right: 0;
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, #969391 0%, #979696 8%, #FAF9F8 11%, #ACAAA8 15%, #808080 30%, #DBDADA 50%, #ACAAA8 88%, #FAF9F8 92%, #FAF9F8 95%, #969391 100%) repeat-y scroll 0 0 transparent;
+}
+
+.panda-button .audio {
+    height: 60px;
+}
+
+.panda-main {
+    height: 500px;
+    border-radius: 20px 20px 3px 3px;
+    padding: 7px;
+    background: #000;
+}
+
+.panda-frame {
+    height: 480px;
+    border: 2px solid #222222;
+    border-radius: 16px 20px 3px 3px;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+.panda-camera {
+    border-radius: 9px;
+    height: 17px;
+    border: 1px solid rgb(27, 27, 27);
+    left: 45px;
+    position: relative;
+    top: 0;
+    width: 17px;
+}
+
+.panda-camera:before {
+    background: rgb(83, 11, 7);
+    content: "";
+    height: 9px;
+    box-shadow: 0 0 5px #000 inset;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    width: 9px;
+    border-radius: 7px;
+}
+
+.panda-net {
+    position: absolute;
+    left: 105px;
+    top: 10px;
+    width: 66px;
+    height: 10px;
+    border-radius: 50px;
+    border: 1px solid #222;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 -1px 0 rgba(0, 0, 0, 0.3);
+    padding: 4px 6px 1px 6px;
+}
+
+.panda-net:after {
+    background: linear-gradient(to bottom, rgba(35, 35, 35, 0.1), rgba(215, 215, 215, 0.3)) repeat scroll 0 0 transparent;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1) inset;
+    content: "";
+    height: 8px;
+    left: 6px;
+    position: absolute;
+    top: 3px;
+    width: 66px;
+}
+
+.panda-net i {
+    width: 1px;
+    height: 1px;
+    background: #312A2A;
+    float: left;
+    display: block;
+    margin-left: 1px;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.panda-logo {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 5px 0;
+    color: #ddd
+}
+
+.panda-opration {
+    border-left: 1px solid rgba(11, 8, 11, 0.16);
+    border-right: 1px solid rgba(11, 8, 11, 0.27);
+    height: 30px;
+    opacity: 0.8;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(205, 203, 209, 0.18), 0 1px rgba(255, 255, 255, 0.3), 0 1px rgba(255, 255, 255, 0.2), 0 0 0 rgba(255, 255, 255, 0.25), 0 1px 0 rgba(11, 8, 11, 0.93);
+}
+
+.panda-return {
+    height: 8px;
+    width: 20px;
+    border-color: #444;
+    border-style: solid;
+    border-width: 2px 2px 2px 0px;
+    border-radius: 0 13px 13px 0;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.panda-return :after {
+    content: '';
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    position: absolute;
+    background: #444;
+    top: 0;
+    left: -2px;
+    transform: rotate(30deg);
+}
+
+.panda-return :before {
+    content: '';
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    position: absolute;
+    background: #444;
+    top: -4px;
+    left: -2px;
+    transform: rotate(-30deg);
+}
+
+.panda-home {
+    left: 148px;
+    top: 15px;
+    cursor: pointer;
+    width: 17px;
+    height: 7px;
+    border: 2px solid #444;
+    border-top-width: 0;
+    position: absolute;
+}
+
+.panda-home:before {
+    content: "";
+    position: absolute;
+    border-color: #444;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    height: 17px;
+    width: 17px;
+    top: -8px;
+    left: -1px;
+    transform: rotate(-45deg);
+}
+
+.panda-home:after {
+    content: "";
+    position: absolute;
+    border-color: #444;
+    border-style: solid;
+    border-width: 2px 2px 0 2px;
+    height: 4px;
+    width: 3px;
+    top: 1px;
+    left: 5px;
+}
+
+.panda-menu {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 50px;
+    border-style: solid;
+    border-color: #444;
+    border-width: 0 0 2px 0;
+    height: 1px;
+    width: 20px;
+}
+
+.panda-menu:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    border-style: solid;
+    border-color: #444;
+    border-width: 2px 0;
+    height: 4px;
+    width: 20px;
+}
+
+.panda-bottom {
+    height: 50px;
+    border-radius: 3px 3px 16px 16px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 #3D3E42;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #C1BFBF), color-stop(5%, #E8E6E6), color-stop(50%,#F0F0F0),color-stop(95%, #E8E6E6), color-stop(100%, #C1BFBF));
+}
+
+.panda-js {
+    color: #323232;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 22px;
+    padding-top: 12px;
+    text-shadow: 0 1px 0 #eee;
+    background: -webkit-linear-gradient(left, #323232 30%, #F0F0F0, #323232 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 350px;
+    animation: textslide 5s linear infinite;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.widget-options-detail {
+    position: absolute;
+    width: 0;
+    height: 20px;
+    border: 1px solid black;
+    top: 210px;
+    right: 1px;
+    background: #eee;
+    overflow-x: hidden;
+    font-size: 12px;
+    padding: 10px 0 10px 30px;
+    color: #000000;
+    transition: 0.5s ease;
+    word-break: break-all
+}
+
+.widget-options-detail:hover {
+    width: 303px;
+    top: 80px;
+    height: 420px;
+}
+
+.widget-options-detail li {
+    list-style: none;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.widget-options-detail li:hover {
+    color: red;
+}
+
+.widget-options-detail div {
+    display: none;
+    padding: 15px;
+    line-height: 20px;
+    margin-left: -30px;
+    color: #000000;
+}
+
+.return-widget-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    width: 26px;
+    display: none;
+    cursor: pointer;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.Comma {
+    color: #FF0000;
+}
+
+.Comment {
+    color: #999999;
+}
+
+.PropertyName {
+    color: #CC0000;
+}
+
+.ObjectBrace {
+    color: #007777;
+}
+
+.String {
+    color: #0000FF;
+}
+
+.Number {
+    color: #AA00AA;
+}
