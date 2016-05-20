@@ -5,7 +5,7 @@
 + 长按开关机、短按解锁屏（右侧顶部按钮）—— See [MouseMe](https://github.com/imwr/MouseMe)
 + 开机粒子动画 —— See [SimpleParticle](https://github.com/imwr/SimpleParticle)
 + 开机文字 —— See [ColorChange](https://github.com/imwr/ColorChange)
-+ 九宫格解锁（默认密码 1→5→3） —— See [NineBox](https://github.com/imwr/NineBox)
++ 九宫格解锁（默认密码 1→5→3，从左到右从上到下从1开始计数） —— See [NineBox](https://github.com/imwr/NineBox)
 + 通话、联系人、信息 Tab —— See [MovableTab](https://github.com/imwr/MovableTab)
 + 信息搜索—— See [AutoAddto](https://github.com/imwr/AutoAddto)
 + 拍照保存图片功能 —— See [SimpleCamera](https://github.com/imwr/SimpleCamera)
