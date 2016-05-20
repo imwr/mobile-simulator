@@ -390,7 +390,6 @@ button:hover {
     font-weight: bold;
     line-height: 22px;
     padding-top: 12px;
-    text-shadow: 0 1px 0 #eee;
     background: -webkit-linear-gradient(left, #323232 30%, #F0F0F0, #323232 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -30,5 +30,7 @@
 ###sony lt22i###
 ![image](snapshot/sony-lt22i.png)
 
+<!--
 ###demo###
 See [here](http://tt-cc.cn/front-end/jquery-game/imageless-mobile)
+-->

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>ttccPhone —— JS+CSS模拟手机</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta name="keywords" content="tt-cc"/>
+    <meta name="description" content="tt-cc"/>
+    <meta http-equiv="Cache-Control" content="no-transform "/>
+    <link rel="shortcut icon" href="http://imwr.github.io/resources/favicon.ico">
+    <link rel="bookmark" href="http://imwr.github.io/resources/favicon.ico">
+
+    <link href="css/panda.css" rel="stylesheet" type="text/css"/>
+    <link href="css/screen.css" rel="stylesheet" type="text/css"/>
+    <link href="css/icons.css" rel="stylesheet" type="text/css"/>
+    <link href="css/animation.css" rel="stylesheet" type="text/css"/>
+    <link href="css/camera-picture-table.css" rel="stylesheet" type="text/css"/>
+    <link href="css/phone-contact-msg.css" rel="stylesheet" type="text/css"/>
+    <link href="css/game-plane.css" rel="stylesheet" type="text/css"/>
+
+    <link href="http://imwr.github.io/AutoAddto/css/AutoAddTo.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="http://imwr.github.io/resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/NineBox/js/NineBox.css3.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/ColorChange/js/ColorChange.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/AutoAddto/js/AutoAddTo.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/MouseMe/js/MouseMe.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/ColorChange/js/ColorChange.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/SimpleParticle/js/SimpleParticle.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/SimpleCamera/js/SimpleCamera.js"></script>
+    <script type="text/javascript" src="http://imwr.github.io/MovableTab/js/MovableTab.js"></script>
+    <script type="text/javascript" src="js/panda-phone.js"></script>
+</head>
+<body onselectstart="return false;" oncontextmenu="return false">
+<!--<body onselectstart="return false;">-->
+<div class="panda">
+    <div class="panda-main">
+        <div class="panda-frame">
+            <div class="panda-camera"></div>
+            <div class="panda-net">
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="panda-logo">IMWR</div>
+            <div class="panda-screen-close">
+                <div class="panda-poweron-animation"></div>
+                <div class="panda-cartoon">
+                    <div><i></i></div>
+                    <div><i></i></div>
+                </div>
+                <div class="panda-poweron-text">
+                    <span class="text-p">I</span><span class="text-a">M</span>
+                    <span class="text-nd text-n">W</span><span class="text-nd text-d">R</span>
+                    <span class="text-j">J</span><span class="text-s">S</span>
+                </div>
+                <div class="panda-poweroning"><i>开</i><i>机</i><i>中 </i> <i>请</i><i>稍</i><i>后</i></div>
+            </div>
+            <div class="panda-screen panda-wallpaper panda-screen-opacity">
+                <div class="panda-circle"></div>
+                <div class="panda-status">
+                    <div class="panda-oprator">小伙伴</div>
+                    <div class="panda-wifi"><i></i></div>
+                    <div class="panda-xinhao"><i></i></div>
+                    <div class="panda-battery"></div>
+                </div>
+                <div class="panda-screen-locked">
+                    <div class="panda-fulldate">
+                        <div class="panda-time"></div>
+                        <div class="panda-date"></div>
+                    </div>
+                    <div class="panda-ninebox"></div>
+                    <div class="panda-call"><i></i>紧急呼叫</div>
+                </div>
+                <div class="panda-screen-open">
+                    <div class="screem-frame">
+                        <div class="srccen-content srccen-content-left">
+                            <div class="screen-big-plugin panda-box-opacity ">
+                                <div class="screen-easytable-plugin">
+                                    <span class="title"><i></i>日程</span>
+                                    <hr style="border: 0;background-color: rgba(255, 252, 252, 0.46);height: 1px;"/>
+                                    <br/>
+                                    <li>panda.htm——2013/10/18</li>
+                                    <li>tablejs——2013/9/23</li>
+                                    <li>table.js——2013/9/23</li>
+                                    <li>......</li>
+                                    <li class="easytable-plugin-detail">共 <span style="color:#333">10</span> 条日程，
+                                        <span style="text-decoration: underline;color: #333;cursor: pointer;">查看详情</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="srccen-content screen-home">
+                            <div class="panda-fulldate panda-box-opacity panda-date-weather">
+                                <div class="panda-left">
+                                    <div class="panda-time"></div>
+                                    <div class="panda-date"></div>
+                                </div>
+                                <div class="panda-sunshine">
+                                    <div class="panda-sun"></div>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                    <hr/>
+                                </div>
+                                <div class="panda-weather">
+                                    <p>成都</p>
+
+                                    <p>热</p>
+
+                                    <p>21～30℃</p></div>
+                            </div>
+                            <div class="panda-screen-icons">
+                                <div class="icon-line">
+                                    <div class="icon screen-icon jingdong">
+                                        <div id="jingdong"></div>
+                                        <span>京东</span>
+                                    </div>
+                                    <div class="icon screen-icon taobao">
+                                        <div></div>
+                                        <span>淘宝</span>
+                                    </div>
+                                    <div class="icon screen-icon weibo">
+                                        <div><i></i><span></span></div>
+                                        <span>微博</span>
+                                    </div>
+                                    <div class="icon screen-icon weixin">
+                                        <div><i></i><span></span></div>
+                                        <span>微信</span>
+                                    </div>
+                                    <div class="icon screen-icon gallery">
+                                        <div><i></i></div>
+                                        <span>图库</span>
+                                    </div>
+                                    <div class="icon screen-icon camera">
+                                        <div><i></i></div>
+                                        <span>相机</span>
+                                    </div>
+                                    <div class="icon screen-icon bianqian">
+                                        <div><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                        <span>便签</span>
+                                    </div>
+                                    <div class="icon screen-icon plane">
+                                        <div><i></i></div>
+                                        <span>游戏</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="srccen-content srccen-content-right">
+                            <div class="screen-big-plugin panda-box-opacity ">
+                                <div class="panda-gallery-msg"><i></i><span>相册中没有任何图片</span></div>
+                                <div class="screen-gallery-plugin">
+                                    <span class="title"><i></i>相册</span>
+                                    <hr style="border: 0;background-color: rgba(255, 252, 252, 0.46);height: 1px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panda-screen-bottom">
+                        <div class="panda-screen-nav">
+                            <div data-index="1"></div>
+                            <div data-index="2" class="curr-nav"></div>
+                            <div data-index="3"></div>
+                            <i></i>
+                        </div>
+                        <div class="panda-dock">
+                            <div class="icon panda-dock-icon phone pcm-tab" data-opr="0">
+                                <div></div>
+                            </div>
+                            <div class="icon panda-dock-icon contact pcm-tab" data-opr="1">
+                                <div></div>
+                            </div>
+                            <div class="icon panda-app">
+                                <div></div>
+                            </div>
+                            <div class="icon panda-dock-icon message pcm-tab" data-opr="2">
+                                <div></div>
+                            </div>
+                            <div class="icon panda-dock-icon browser">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panda-content">
+                        <div class="phone-contact-msg">
+                            <a class="tab" data-href="#screen-phone">拨 号</a>
+                            <a class="tab" data-href="#screen-contact">联 系 人</a>
+                            <a class="tab" data-href="#screen-msg">信 息</a>
+
+                            <div class="screen-phone" id="screen-phone">
+                                <div class="phone-title">通话记录&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div class="phone-record">
+                                    <div class="phone-contactor">
+                                        <div class="contact-name">小伙伴1<span class="record-time">10分钟前</span></div>
+                                        <div class="contact-num">1234567891234[四川成都]</div>
+                                        <span class="phone-contact-dailicon"></span>
+                                    </div>
+                                    <div class="phone-contactor">
+                                        <div class="contact-name">小伙伴2<span class="record-time">1小时前</span></div>
+                                        <div class="contact-num">1234567891234[四川成都]</div>
+                                        <span class="phone-contact-dailicon"></span>
+                                    </div>
+                                    <div class="phone-contactor">
+                                        <div class="contact-name">小伙伴3<span class="record-time">12:01</span></div>
+                                        <div class="contact-num">1234567891234[四川成都]</div>
+                                        <span class="phone-contact-dailicon"></span>
+                                    </div>
+                                </div>
+                                <ul class="phone-num">
+                                    <input placeholder="请输入号码"/>
+                                    <li class="num">1</li>
+                                    <li class="num">2</li>
+                                    <li class="num">3</li>
+                                    <li class="num">4</li>
+                                    <li class="num">5</li>
+                                    <li class="num">6</li>
+                                    <li class="num">7</li>
+                                    <li class="num">8</li>
+                                    <li class="num">9</li>
+                                    <li class="num">*</li>
+                                    <li class="num">0</li>
+                                    <li class="num">#</li>
+                                    <li>√</li>
+                                    <li class="dial">呼叫</li>
+                                    <li class="delnum">×</li>
+                                </ul>
+                            </div>
+                            <div id="screen-contact" class="screen-contact">
+                                <div class="phone-title">联系人&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴1</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴2</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴3</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴4</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴5</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴6</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴7</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴7</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴8</div>
+                                    <div class="contact-num">1234567891234[四川成都]</div>
+                                    <span class="phone-contact-dailicon"></span>
+                                </div>
+                            </div>
+                            <div id="screen-msg" class="screen-msg">
+                                <div class="phone-title">消息&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div style="position: relative;">
+                                    <div class="contact-search-icon"></div>
+                                    <input class="contact-search" placeholder="请输入号码或拼音搜索"/>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴1<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">小伙伴1</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴2<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">小伙伴2</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴3<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">abcdabcd</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴4<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">AbCd</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴5<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">.*\=</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴6<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">.*\=</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴7<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">*.= 哈哈哈</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴7<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">小伙伴3测试一下</div>
+                                </div>
+                                <div class="phone-contactor">
+                                    <div class="contact-touxiang"></div>
+                                    <div>小伙伴8<span class="record-time">10分钟前</span></div>
+                                    <div class="contact-num">小 伙 伴</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panda-content">
+                        <div class="panda-game-plane">
+                            <div class="panda-plane-container">
+                                <canvas class="panda-plane-canvas"></canvas>
+                            </div>
+                            <div class="panda-plane-main">
+                                <div class="panda-plane-linker">
+                                    <span></span><span></span> <span></span><span></span><span></span>
+                                </div>
+                                <div class="panda-plane-menu">
+                                    <div class="main-menu panda-plane-msg">飞机大战</div>
+                                    <div class="panda-plane-score"></div>
+                                    <div class="panda-plane-time"></div>
+                                    <div class="main-menu panda-plane-startgame menu">开始游戏</div>
+                                    <div class="main-menu panda-plane-para menu">参数设置</div>
+                                    <div class="main-menu panda-plane-help menu">游戏帮助</div>
+                                    <div class="panda-plane-menu-detail"></div>
+                                    <div class="panda-plane-backmenu menu" style="display: none">返回菜单</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panda-content">
+                        <div class="panda-screen-camera">
+                            <div class="big-camera">
+                                <div><i></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panda-content">
+                        <div class="panda-screen-gallery">
+                            <div class="gallery-item-main currDomIndex2"></div>
+                            <div class="default-hide gallery-detail currDomIndex3">
+                                <div class="gallery-slide-handle">
+                                    <span class="pull-left" onclick="imagetools.left()">←左旋90度</span>
+                                    <span class="pull-left" onclick="imagetools.right()">右旋90度→</span>
+                                    <span class="pull-right" onclick="imagetools.zoomin()">放大＋</span>
+                                    <span class="pull-right" onclick="imagetools.zoomout(0.1)">－缩小</span>
+                                </div>
+                                <div class="panda-imgtools"></div>
+                            </div>
+                            <div class="gallery-item panda-gallery-carame currDomIndex1">
+                                <span>相机图片</span>
+                            </div>
+                            <div class="gallery-item panda-gallery-weixin">
+                                <span>微信Photos</span>
+                            </div>
+                            <div class="gallery-item panda-gallery-weibo">
+                                <span>微博Pictures</span>
+                            </div>
+                            <div class="gallery-item panda-gallery-map">
+                                <span>地图Icons</span>
+                            </div>
+                            <div class="gallery-item panda-gallery-brower">
+                                <span>浏览器Images</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panda-content">
+                        <div class="gallery-slide">
+                            <div class="content-handle-title">
+                                <span class="pull-left">【图片浏览】</span>
+                                <span class="pull-right"
+                                      onclick="$('.panda-content')[4].style.display = 'none';showCamera()">相机</span>
+                                <span class="slide-play pull-right">播放</span>
+                            </div>
+                            <div class="gallery-slide-main"></div>
+                        </div>
+                    </div>
+                    <div class="panda-content">
+                        <div class="easy-table-plugin">
+                            <div class="content-handle-title">
+                                <span class="pull-left">【日程管理】</span>
+                            </div>
+                            <table border="0" cellspacing="0" cellpadding="5" class="easy-table-main">
+                                <thead>
+                                <tr>
+                                    <th class="sort" stype="int" index="0">ID</th>
+                                    <th width="74">
+                                        <span class="sort" stype="string" index="1">标题</span>|
+                                        <span class="sort" stype="string" sdata="_ext" index="1">类型</span>
+                                    </th>
+                                    <th class="sort" stype="data" index="2">
+                                        创建
+                                    </th>
+                                    <th width="40" class="sort" stype="int" sdata="_order" index="3">
+                                        剩余
+                                    </th>
+                                    <th width="24" class="sort" stype="bool" index="4">Done</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td align="center">1</td>
+                                    <td _ext="htm">panda.htm</td>
+                                    <td align="center">2013/10/18</td>
+                                    <td align="right" _order="433244">5.1天</td>
+                                    <td align="center"><input type="checkbox" checked="checked"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">2</td>
+                                    <td _ext="js">tablejs</td>
+                                    <td align="center">2013/9/23</td>
+                                    <td align="right" _order="2560">1小时</td>
+                                    <td align="center"><input type="checkbox"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">3</td>
+                                    <td _ext="js">table.js</td>
+                                    <td align="center">2013/9/23</td>
+                                    <td align="right" _order="3563">200分</td>
+                                    <td align="center"><input type="checkbox"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">4</td>
+                                    <td _ext="xml">1111.xml</td>
+                                    <td align="center">2013/10/4</td>
+                                    <td align="right" _order="11397">300分</td>
+                                    <td align="center"><input type="checkbox"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">5</td>
+                                    <td _ext="xml">3333.xml</td>
+                                    <td align="center">2013/10/4</td>
+                                    <td align="right" _order="108">100秒</td>
+                                    <td align="center"><input type="checkbox"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">6</td>
+                                    <td _ext="htm">test.htm</td>
+                                    <td align="center">2013/10/4</td>
+                                    <td align="right" _order="14074">2天</td>
+                                    <td align="center"><input type="checkbox" checked="checked"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">7</td>
+                                    <td _ext="js">panda.js</td>
+                                    <td align="center">2013/10/4</td>
+                                    <td align="right" _order="2844">3.5时</td>
+                                    <td align="center"><input type="checkbox"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">8</td>
+                                    <td _ext="mp3">小伙伴.mp3</td>
+                                    <td align="center">2013/9/20</td>
+                                    <td align="right" _order="3111293">1周</td>
+                                    <td align="center"><input type="checkbox"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">9</td>
+                                    <td _ext="doc">.doc</td>
+                                    <td align="center">2012/2/2</td>
+                                    <td align="right" _order="63488">7/2天</td>
+                                    <td align="center"><input type="checkbox" checked="checked"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">10</td>
+                                    <td _ext="doc">小伙伴.doc</td>
+                                    <td align="center">2012/2/2</td>
+                                    <td align="right" _order="164352">72小时</td>
+                                    <td align="center"><input type="checkbox"/></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panda-opr panda-opr-frame">
+                    <div class="panda-opr-opacity"></div>
+                    <div class="panda-opr-content"></div>
+                </div>
+                <div class="default-hide panda-opr panda-menu-frame">
+                    <div class="panda-opr-opacity"></div>
+                    <div class="panda-opr-menu ">
+                        <p>最近运行的程序
+                            <span onclick="$('.panda-menu-frame .icon').hide().remove();this.style.display='none'"> x </span>
+                        </p>
+
+                        <div class="opr-menu-tasklist"></div>
+                    </div>
+                </div>
+                <div class="default-hide panda-menu-widget">
+                    <ul class="panda-widget-button">
+                        <li class="case"></li>
+                        <li class="case"></li>
+                        <li class="case"></li>
+                        <li class="case"></li>
+                        <li class="case"></li>
+                        <li class="options">OPTIONS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panda-button b-power"><i></i></div>
+        <div class="panda-button b-audio"><i class="audio"></i></div>
+        <div class="panda-button b-camera"><i></i></div>
+    </div>
+    <div class="panda-opration">
+        <div class="panda-return"><i></i></div>
+        <div class="panda-home"></div>
+        <div class="panda-menu"></div>
+    </div>
+    <div class="panda-bottom">
+        <div class="panda-js">IMWRJS</div>
+    </div>
+</div>
+<div class="panda">
+    <section>
+        <br/>
+        <!-- JiaThis Button BEGIN -->
+        <div class="jiathis_style">
+            <span class="jiathis_txt">分享到：</span>
+            <a class="jiathis_button_weixin">微信</a>
+            <a class="jiathis_button_tsina">新浪微博</a>
+            <a class="jiathis_button_qzone">QQ空间</a>
+            <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
+               target="_blank">更多</a>
+        </div>
+        <script type="text/javascript">
+            var jiathis_config = {
+                summary: "",
+                shortUrl: false,
+                hideMore: false
+            }
+        </script>
+        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+        <!-- JiaThis Button END -->
+        <br/>
+        <br/>
+
+        <div id="disqus_thread"></div>
+    </section>
+</div>
+<script>
+    var disqus_config = function () {
+        this.page.url = location.href; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//tt-cc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+</body>
+</html>
