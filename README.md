@@ -1,5 +1,5 @@
-# WrMobile —— Imageless Mobile Devices
-很久前业余写的 CSS+JS 模拟手机，主体样式按照当时用的 sony lt22i 手机外观编写，没有任何图片素材，且把自己开发的大部分 jQuery plugin 整合了进去。
+# Mobile-Simulator —— Imageless Mobile Devices
+很久前业余写的 CSS+JS 模拟手机，主体样式按照当时用的 sony lt22i 手机外观编写，没有任何图片素材，整合了部分自己开发的 JQuery Plugin。
 
 ###插件特性###
 + 长按开关机、短按解锁屏（右侧顶部按钮）—— See [MouseMe](https://github.com/imwr/MouseMe)
@@ -12,7 +12,6 @@
 + 相册图片Slider（完善中）
 + 相册图片工具（完善中）
 + 桌面图标拖拽（完善中）
-+ 相册图片Slider（完善中）
 + 待续......
 
 ###其他特性###
