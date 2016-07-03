@@ -14,7 +14,7 @@ $(document).ready(function () {
         poweroff: 3,
         oning: 4
     };    //屏幕状态 0 关闭 1 锁屏 2 正常 3 关机 4 开机中
-    var leavetTime = 20, LAVENT_TIME = 20;//无操作时间，锁屏时间
+    var leavetTime = 20, LAVENT_TIME = 30;//无操作时间，锁屏时间
     var contentIndex = null, currDomIndex = 0;
 
     //test start

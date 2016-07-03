@@ -120,10 +120,12 @@
     bottom: 0;
     text-align: center;
     background: rgb(44, 43, 43);
+    margin: 0;
+    padding: 0;
 }
 
 .screen-phone .phone-num input {
-    width: 94%;
+    width: 240px;
     border-radius: 8px;
     height: 27px;
     margin: 6px;
