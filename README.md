@@ -31,5 +31,5 @@
 
 <!--
 ###demo###
-See [here](http://tt-cc.cn/front-end/jquery-game/imageless-mobile)
+See [here](http://tt-cc.cc/front-end/jquery-game/imageless-mobile)
 -->
